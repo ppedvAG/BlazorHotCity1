@@ -1,0 +1,24 @@
+﻿@page "/attr"
+@inject NavigationManager nm
+<div style="background-color:@variable">
+<h3>Attribute</h3>
+<input type="checkbox" />
+<input @bind-value="variable" @bind-value:event="oninput" />
+<button @onclick="click">test</button>
+<Component1 @ref="komischerkey" wild=   "eins" >
+
+</Component1>
+</div>
+
+@code {
+    string variable;
+    Component1 komischerkey;
+    void click()
+    {
+        nm.NavigateTo("/counter");
+        //komischerkey.
+
+
+
+    }
+}
