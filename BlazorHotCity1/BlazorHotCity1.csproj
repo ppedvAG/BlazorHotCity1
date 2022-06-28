@@ -6,4 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="labs\" />
+    <Folder Include="Pages\modul2\" />
+    <Folder Include="Pages\modul3\" />
+    <Folder Include="Pages\modul4\" />
+    <Folder Include="Pages\modul5\" />
+    <Folder Include="Pages\modul6\" />
+    <Folder Include="Pages\modul7\" />
+    <Folder Include="Pages\modul8\" />
+  </ItemGroup>
+
 </Project>
