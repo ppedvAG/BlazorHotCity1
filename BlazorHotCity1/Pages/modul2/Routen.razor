@@ -1,0 +1,15 @@
+﻿@page "/route"
+@page "/hannes"
+@page "/hannes/{id:int}"
+<h3>Routen</h3>
+@id<br />
+@Filter
+@code {
+    //[ParameterAttribute]
+    [Parameter]
+    public int id { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery(Name ="filter1")]
+    public string? Filter { get; set; }
+
+}
