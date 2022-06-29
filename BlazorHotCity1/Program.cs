@@ -1,7 +1,7 @@
 using BlazorHotCity1.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
