@@ -1,0 +1,18 @@
+﻿Nuget 
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Design
+
+Connection string
+Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=True
+
+scaffold-dbcontext "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=True"  Microsoft.EntityFrameworkCore.SqlServer -outputdir models
+
+appsettings
+{
+  "ConnectionStrings": { "Northwind": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=True" },
+ 
+
+ priogramm.cs#
+ builder.Services.AddDbContext<NorthwindContext>(o=>o.UseSqlServer(
+    builder.Configuration.GetConnectionString("Northwind")));
