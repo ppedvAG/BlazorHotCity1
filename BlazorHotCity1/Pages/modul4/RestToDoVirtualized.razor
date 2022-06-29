@@ -1,0 +1,39 @@
+﻿@page "/vtodo"
+@inject IHttpClientFactory http;
+<h3>RestToDo</h3>
+<button class="btn btn-primary" @onclick="laden">laden</button>
+
+<ul class="list-group">
+
+    <Virtualize Items="TodoListe" Context="item"
+                OverscanCount="5" ItemSize="15">
+        <Placeholder><p>noch keine Arbeite für dich-drpck mal den Button</p></Placeholder>
+        <ItemContent>
+            <li class="list-group-item ">
+                @if (item.completed)
+                {
+                    <del>@item.title </del>
+                }
+                else
+                {
+                    @item.title
+                }
+
+
+            </li>
+        </ItemContent>
+
+    </Virtualize>
+</ul>
+
+
+@code {
+    public List<Todos> TodoListe { get; set; }
+    async Task laden()
+    {
+        var client = http.CreateClient();
+        TodoListe = await client.GetFromJsonAsync<List<Todos>>("https://jsonplaceholder.typicode.com/todos");
+
+    }
+
+}
