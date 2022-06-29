@@ -2,5 +2,6 @@
 {
     public class Nachrichten
     {
+        public string Text { get; set; }
     }
 }
