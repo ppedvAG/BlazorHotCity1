@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="labs\" />
-    <Folder Include="Pages\modul5\" />
     <Folder Include="Pages\modul6\" />
     <Folder Include="Pages\modul7\" />
     <Folder Include="Pages\modul8\" />
