@@ -1,0 +1,16 @@
+﻿<h3>BindableComponent</h3>
+<input @bind="helper"/>
+<button class="btn btn-outline-info" @onclick="click">bind</button>
+@code {
+    string helper;
+
+    [Parameter]
+    public string Baum { get; set; }
+    [Parameter]
+    public EventCallback<string> BaumChanged { get; set; }
+
+    void click()
+    {
+        BaumChanged.InvokeAsync(helper);
+    }
+}
