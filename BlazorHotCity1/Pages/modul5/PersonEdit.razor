@@ -38,6 +38,7 @@
     protected override void OnInitialized()
     {
         _edx = new EditContext(MyPerson);
+        _edx.SetFieldCssClassProvider( new BootstrapCSSFixFieldClassProvider());
     }
     void save()
     {
