@@ -1,6 +1,6 @@
 ﻿@page "/person/{id:int?}"
 <h3>PersonEdit</h3>
-<EditForm Model="MyPerson" OnInvalidSubmit="save2">
+<EditForm EditContext="_edx" OnInvalidSubmit="save2">
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <div class="mb-3 row">
         <label class="col-sm-2 col-form-label">Name</label>
@@ -33,7 +33,12 @@
     [Parameter]
     public int id { get; set; }
     Person MyPerson = new Person();
+    EditContext _edx;
 
+    protected override void OnInitialized()
+    {
+        _edx = new EditContext(MyPerson);
+    }
     void save()
     {
 
