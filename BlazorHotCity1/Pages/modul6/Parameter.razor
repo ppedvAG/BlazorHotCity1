@@ -1,0 +1,22 @@
+﻿@using modul5
+<div @attributes="MyAttributes">
+    <h3>@Title</h3>
+    @ChildContent @id @Name
+</div>
+@code {
+    [EditorRequired]
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public Person MyPerson { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> MyAttributes { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [CascadingParameter]
+    public int id { get; set; }
+    [CascadingParameter(Name="hannes")]
+    public string Name { get; set; }
+}

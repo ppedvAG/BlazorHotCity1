@@ -1,0 +1,18 @@
+﻿@page "/par"
+@using modul5
+<h3>Parameter Demo</h3>
+<CascadingValue Value="42">
+    <CascadingValue  Value="@("rot")" Name="hannes">
+        <Parameter Title="Hallo Welt"
+                   MyPerson="@(new Person())"
+                   class="alert-danger" width="100px">
+            <p>
+                Das sit ein text
+                <button>test</button>
+            </p>
+        </Parameter>
+    </CascadingValue>
+</CascadingValue>
+@code {
+    string hannes = "rot";
+}
