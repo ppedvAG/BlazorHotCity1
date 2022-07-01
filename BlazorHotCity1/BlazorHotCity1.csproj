@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\modul6\CssComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="labs\" />
     <Folder Include="Pages\modul7\" />
     <Folder Include="Pages\modul8\" />
@@ -22,6 +26,18 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\modul6\CssComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\modul6\CssComponent.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\modul6\CssComponent.razor" />
   </ItemGroup>
 
 </Project>
