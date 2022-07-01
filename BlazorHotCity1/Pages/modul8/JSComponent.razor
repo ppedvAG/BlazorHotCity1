@@ -1,0 +1,21 @@
+﻿@page "/js"
+@inject IJSRuntime JSRuntime
+<h3>JSComponent</h3>
+<button @onclick="alert">alert</button>
+<button @onclick="Title">title</button>
+
+@code {
+        void alert()
+        {
+            JSRuntime.InvokeVoidAsync("alert", "Hallo Welt");
+        }
+        async Task confirm()
+        {
+            var antowrt= await JSRuntime.InvokeAsync<bool>("confirm", "Frage?");
+        }
+        void Title()
+        {
+            JSRuntime.InvokeVoidAsync("eval", "document.title = 'Neue Page';");
+        }
+}
+
