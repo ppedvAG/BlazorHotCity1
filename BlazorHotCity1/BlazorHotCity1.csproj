@@ -38,4 +38,8 @@
     <None Include="Pages\modul6\CssComponent.razor" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RazorClassLibrary1\RazorClassLibrary1.csproj" />
+  </ItemGroup>
+
 </Project>
