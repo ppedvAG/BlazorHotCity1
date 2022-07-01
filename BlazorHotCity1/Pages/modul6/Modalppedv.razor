@@ -33,9 +33,11 @@
     [Parameter]
     public EventCallback   OnSave { get; set; }
     bool isShow;
-    public void Show()
+    public async Task Show()
     {
+      
         isShow = !isShow;
-        StateHasChanged();
+     //   StateHasChanged();
+        
     }
 }
